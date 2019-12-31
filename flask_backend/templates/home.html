@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+          crossorigin="anonymous"/>
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.4.1.min.js') }}"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/popper.min.js') }}"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="{{ url_for('static', filename='js/mdb.min.js') }}"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <!-- Initializations -->
+    <script type="text/javascript">
+        // Animations initialization
+        new WOW().init();
+    </script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+
+<head>
+    <title>{{ 'title' }}</title>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+    <nav class="nav nav-pills flex-column flex-sm-row bg-dark lighten-1">
+      <a class="flex-sm-fill text-sm-center nav-link active" href="/">Home</a>
+      <a class="flex-sm-fill text-sm-center nav-link " href="/game-of-life/">Game of Life</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="/snake/">Snake</a>
+    </nav>
+  <!-- Navbar -->
+
+  <!--Main layout-->
+  <main class="text-center">
+      <h1 class="my-4">Welcome !</h1>
+    <div>
+        <div class="card border-primary mx-lg-5 ">
+            <div class="card-header bg-info"><h2>Game of Life</h2></div>
+            <div class="card-body px-5">
+                <p>
+                    This is a zero player game who try to simulate life.
+                </p>
+                <p>
+                    It's not a big project and not too complicated game, but i always liked the Game of Life and always wanted to code one someday.
+                </p>
+                <p>
+                    And because I didn't have prior experience in React I thought it would be a good experience and a good training.
+                </p>
+                <p>
+                    Here's the tutorial i used on <a href="https://youtu.be/PM0_Er3SvFQ" target="_blank">Youtube</a>
+                </p>
+                <p>
+                    But I want to improve the game :
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-info">The logic for the game from the tutorial is not really clear and clean, I have some idea to clean this up</li>
+              <li class="list-group-item border-info">Seeding randomly the grid is nice at first, but when you want to play a bit more with it is not enough...
+              He would be nice to be able to add on the grid some specific forms.</li>
+            </ul>
+        </div>
+        <div class="card border-primary m-5">
+            <div class="card-header bg-info"><h2>Snake</h2></div>
+            <div class="card-body">
+                <p>
+                    I think we all know what game Snake is, but this time, he's playing on his own. How? With path finding algorithm !
+                </p>
+                <p>
+                    For the moment you have the choice between Dijstra and A* algorithm but more are to come !
+                </p>
+                <p>
+                    I tested my algorithm on an other project in Python using pyglet. Here's the <a href="https://github.com/M0l42/Snake_pyglet" target="_blank">repo</a>
+                </p>
+                <p>
+                    There's some improvement in the way
+                </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item border-info">
+                <p>
+                  For the moment, when he's trying to finding the apple, he doesn't know his body is moving along.
+                </p>
+                <p>
+                  There's sometimes he can find the apple but have to play with the environment to make the part of him which are blocking him disappear.
+                </p>
+                <p>
+                  So I want him to be aware of his moving body
+                </p>
+              </li>
+              <li class="list-group-item border-info">
+                  The shortest path is not always the best one. Sometimes it's better to find another way so you're not stuck after finding your current goal
+              </li>
+            </ul>
+        </div>
+    </div>
+  </main>
+  <!--Main layout-->
+  </body>
+
+  <!--Footer-->
+    <footer class="page-footer text-center font-small bg-dark lighten-1 mt-4 pt-4 fadeIn">
+        <div class="center">
+            <img src="{{ url_for('static', filename='img/icon/flask.png') }}">
+            <img src="{{ url_for('static', filename='img/icon/react.png') }}">
+            <img src="{{ url_for('static', filename='img/icon/bootstrap.png') }}">
+        </div>
+        <!-- Social icons -->
+        <div class="pb-4 mt-2">
+          <a href="https://www.facebook.com/nathan.boukobza.71" target="_blank">
+            <i class="fab fa-facebook-f mr-3"></i>
+          </a>
+
+          <a href="https://github.com/M0l42" target="_blank">
+            <i class="fab fa-github mr-3"></i>
+          </a>
+
+          <a href="https://www.linkedin.com/in/nathan-boukobza-6030b166/" target="_blank">
+            <i class="fab fa-linkedin mr-3"></i>
+          </a>
+        </div>
+        <!-- Social icons -->
+    </footer>
+  <!--/.Footer-->
+
+</html>

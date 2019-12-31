@@ -1,0 +1,171 @@
+.container {
+    margin-top: 200px
+}
+
+.social-icon .fa {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 30px;
+    height: 30px !important;
+    line-height: 1;
+    font-size: 14px;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+    color: #fff;
+    background: none
+}
+
+.social-icon:hover .fa {
+    opacity: .8
+}
+
+.social-icon .fa-pinterest {
+    background-color: #cb2027
+}
+
+.social-icon .fa-rss {
+    background-color: #f26522
+}
+
+.social-icon .fa-facebook {
+    background-color: #3b5998
+}
+
+.social-icon .fa-twitter {
+    background-color: #00aced
+}
+
+.social-icon .fa-flickr {
+    background-color: #ff0084
+}
+
+.social-icon .fa-dribbble {
+    background-color: #ea4c89
+}
+
+.social-icon .fa-behance {
+    background-color: #42a9fb
+}
+
+.social-icon .fa-linkedin {
+    background-color: #007bb6
+}
+
+.social-icon .fa-vimeo-square {
+    background-color: #aad450
+}
+
+.social-icon .fa-youtube {
+    background-color: #bb0000
+}
+
+.social-icon .fa-tumblr {
+    background-color: #32506d
+}
+
+.social-icon .fa-github-alt {
+    background-color: #333333
+}
+
+.social-icon .fa-google-plus {
+    background-color: #dd4b39
+}
+
+.social-icon .fa-instagram {
+    background-color: #517fa4
+}
+
+.social-icon .fa-soundcloud {
+    background-color: #f80
+}
+
+.social-icon-large {
+    margin-right: 20px
+}
+
+.social-icon-large .fa {
+    font-size: 25px;
+    background: transparent;
+    color: #000;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 60px;
+    height: 60px !important;
+    line-height: 1;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease
+}
+
+.social-icon-large:hover .fa {
+    color: #fff
+}
+
+.social-icon-large:hover .fa-pinterest {
+    background-color: #cb2027
+}
+
+.social-icon-large:hover .fa-rss {
+    background-color: #f26522
+}
+
+.social-icon-large:hover .fa-facebook {
+    background-color: #3b5998
+}
+
+.social-icon-large:hover .fa-twitter {
+    background-color: #00aced
+}
+
+.social-icon-large:hover .fa-flickr {
+    background-color: #ff0084
+}
+
+.social-icon-large:hover .fa-dribbble {
+    background-color: #ea4c89
+}
+
+.social-icon-large:hover .fa-behance {
+    background-color: #42a9fb
+}
+
+.social-icon-large:hover .fa-linkedin {
+    background-color: #007bb6
+}
+
+.social-icon-large:hover .fa-vimeo-square {
+    background-color: #aad450
+}
+
+.social-icon-large:hover .fa-youtube {
+    background-color: #bb0000
+}
+
+.social-icon-large:hover .fa-tumblr {
+    background-color: #32506d
+}
+
+.social-icon-large:hover .fa-github-alt {
+    background-color: #333333
+}
+
+.social-icon-large:hover .fa-google-plus {
+    background-color: #dd4b39
+}
+
+.social-icon-large:hover .fa-instagram {
+    background-color: #517fa4
+}
+
+.social-icon-large:hover .fa-soundcloud {
+    background-color: #f80
+}
+
+.btn-round {
+    border-radius: 4px !important
+}
+
+.btn.btn-large i {
+    font-size: 24px
+}

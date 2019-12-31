@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% block bootstrap4_extra_head %}
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link href='https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css'>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css'>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+    <link href="https://lipis.github.io/bootstrap-social/bootstrap-social.css" rel="stylesheet" >
+
+{% endblock bootstrap4_extra_head %}
+
+{% block bootstrap4_content %}
+<body>
+
+  <!-- Navbar -->
+    <nav class="nav nav-pills flex-column flex-sm-row">
+      <a class="flex-sm-fill text-sm-center nav-link active" href="/">Home</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="/game-of-life/">Game of Life</a>
+      <a class="flex-sm-fill text-sm-center nav-link" href="/snake/">Snake</a>
+    </nav>
+  <!-- Navbar -->
+
+  <!--Main layout-->
+  <main>
+    <div class="container">
+
+    {% block content %}
+    {% endblock %}
+
+    </div>
+  </main>
+  <!--Main layout-->
+  </body>
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small bg-dark lighten-1 pt-4 fadeIn">
+    <!-- Social icons -->
+    <div class="pb-4">
+      <a href="https://www.facebook.com/mdbootstrap" target="_blank">
+        <i class="fab fa-facebook-f mr-3"></i>
+      </a>
+
+      <a href="https://twitter.com/MDBootstrap" target="_blank">
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://www.youtube.com/watch?v=7MUISDJ5ZZ4" target="_blank">
+        <i class="fab fa-youtube mr-3"></i>
+      </a>
+        <a href="https://github.com/M0l42">
+            <i class="fab fa-github mr-3"></i>
+        </a>
+
+        <a href="https://github.com/M0l42">
+            <i class="fab fa-linkedin mr-3"></i>
+        </a>
+    </div>
+    <!-- Social icons -->
+  </footer>
+  <!--/.Footer-->
+{% endblock bootstrap4_content %}
+
+</html>
