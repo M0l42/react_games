@@ -46,6 +46,9 @@ def update():
     elif algorithm == 'a_star':
         path_algorithm = AStar(snake, apple)
     path = path_algorithm.test()
+    path = []
+    for i in range(100):
+        path.extend([0, 0, 2, 2, 1, 1, 3, 3])
     result = path_algorithm.error
     if result is None:
         result = 'success'
