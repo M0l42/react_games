@@ -32,35 +32,25 @@ def snake():
 
 @app.route('/update/', methods=['POST'])
 def update():
-    app.logger.warning("HERE !")
     data_byte = request.data
 
     my_json = data_byte.decode('utf8').replace("'", '"')
-    app.logger.warning(my_json)
     data = json.loads(my_json)
 
     snake = Snake(data['snake'])
     apple = Apple(data['apple'])
     algorithm = data['algorithm']
-    app.logger.warning(snake.body)
-    app.logger.warning(apple.y)
-    app.logger.warning(apple.x)
-    app.logger.warning(algorithm)
 
     if algorithm == 'dijkstra':
         path_algorithm = DijkstraAlgorithm(snake, apple)
     elif algorithm == 'a_star':
         path_algorithm = AStar(snake, apple)
     path = path_algorithm.test()
-    # app.logger.warning(path)
+    result = path_algorithm.error
+    if result is None:
+        result = 'success'
 
-    # if algorithm == 'DijkstraAlgorithm':
-    #     path_algorithm = DijkstraAlgorithm(snake, apple)
-    # else:
-    #     path_algorithm = AStar(snake, apple)
-    # path = path_algorithm.test()
-    #
-    return jsonify({'result': 'sucess', 'path': path})
+    return jsonify({'result': result, 'path': path})
 
 
 if __name__ == '__main__':

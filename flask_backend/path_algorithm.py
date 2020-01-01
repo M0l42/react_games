@@ -18,6 +18,7 @@ class PathAlgorithms:
         self.new_map = None
         self.init_map()
         self.load_map()
+        self.error = None
 
     def init_map(self):
         n = 30
@@ -76,24 +77,26 @@ class DijkstraAlgorithm(PathAlgorithms):
         nodes.append([Node(snake_x, snake_y, 0, 0)])
         self.find_path(nodes[0][0])
         nodes.append(nodes[0][0].node_list)
-        while target_not_found:
+        while target_not_found and self.error is None:
             nodes.append(list())
             for node in nodes[-2]:
                 target = self.find_path(node)
                 if target:
-                    print("found !")
                     target_not_found = False
                     break
                 else:
                     nodes[-1].extend(node.node_list)
+            if len(nodes[-1]) == 0 and target_not_found:
+                self.error = "Not found"
 
-        path = list()
-        while True:
-            path.append(target.direction)
-            target = target.node
-            if target == nodes[0][0]:
-                break
-        return path
+        if self.error is None:
+            path = list()
+            while True:
+                path.append(target.direction)
+                target = target.node
+                if target == nodes[0][0]:
+                    break
+            return path
 
 
 class AStar(DijkstraAlgorithm):
@@ -126,21 +129,24 @@ class AStar(DijkstraAlgorithm):
         nodes.append(initial_node)
         self.find_path(nodes[0])
         nodes.extend(nodes[0].node_list)
-        while True:
+        while self.error is None:
             result = list()
             nodes = self.nodes_sorting(nodes, result)
-            target = self.find_path(nodes[0])
-            if target:
-                print("found !")
-                break
-            else:
-                nodes.extend(nodes[0].node_list)
-                nodes.pop(0)
+            try:
+                target = self.find_path(nodes[0])
+                if target:
+                    break
+                else:
+                    nodes.extend(nodes[0].node_list)
+                    nodes.pop(0)
+            except IndexError:
+                self.error = "Not Found"
 
-        path = list()
-        while True:
-            path.append(target.direction)
-            target = target.node
-            if target == initial_node:
-                break
-        return path
+        if self.error is None:
+            path = list()
+            while True:
+                path.append(target.direction)
+                target = target.node
+                if target == initial_node:
+                    break
+            return path
