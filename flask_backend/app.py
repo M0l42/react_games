@@ -43,12 +43,9 @@ def update():
 
     if algorithm == 'dijkstra':
         path_algorithm = DijkstraAlgorithm(snake, apple)
-        path = []
-        for i in range(10):
-            path.extend([0, 0, 2, 2, 1, 1, 3, 3])
     elif algorithm == 'a_star':
         path_algorithm = AStar(snake, apple)
-        path = path_algorithm.test()
+    path = path_algorithm.test()
     result = path_algorithm.error
     if result is None:
         result = 'success'

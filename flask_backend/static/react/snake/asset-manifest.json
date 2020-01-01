@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/static/react/snake/css/main.bf632ae9.chunk.css",
-    "main.js": "/static/react/snake/js/main.fd76985e.chunk.js",
-    "main.js.map": "/static/react/snake/js/main.fd76985e.chunk.js.map",
+    "main.js": "/static/react/snake/js/main.dadcc187.chunk.js",
+    "main.js.map": "/static/react/snake/js/main.dadcc187.chunk.js.map",
     "runtime-main.js": "/static/react/snake/js/runtime-main.867f0b5b.js",
     "runtime-main.js.map": "/static/react/snake/js/runtime-main.867f0b5b.js.map",
     "css/2.17e5ed98.chunk.css": "/static/react/snake/css/2.17e5ed98.chunk.css",
@@ -12,7 +12,7 @@
     "css/2.17e5ed98.chunk.css.map": "/static/react/snake/css/2.17e5ed98.chunk.css.map",
     "css/main.bf632ae9.chunk.css.map": "/static/react/snake/css/main.bf632ae9.chunk.css.map",
     "js/2.67f6c2b6.chunk.js.LICENSE": "/static/react/snake/js/2.67f6c2b6.chunk.js.LICENSE",
-    "precache-manifest.1eb59f403d4877bef39e849589f73cb8.js": "/static/react/snake/precache-manifest.1eb59f403d4877bef39e849589f73cb8.js",
+    "precache-manifest.ecc2af4413944286cfd807eec0a0bb2d.js": "/static/react/snake/precache-manifest.ecc2af4413944286cfd807eec0a0bb2d.js",
     "service-worker.js": "/static/react/snake/service-worker.js"
   },
   "entrypoints": [
@@ -20,6 +20,6 @@
     "css/2.17e5ed98.chunk.css",
     "js/2.67f6c2b6.chunk.js",
     "css/main.bf632ae9.chunk.css",
-    "js/main.fd76985e.chunk.js"
+    "js/main.dadcc187.chunk.js"
   ]
 }
