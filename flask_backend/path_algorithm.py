@@ -12,20 +12,20 @@ class Node:
 
 
 class PathAlgorithms:
-    def __init__(self, snake, apple):
+    def __init__(self, snake, apple, rows, cols):
         self.apple = apple
         self.snake = snake
+        self.rows = rows
+        self.cols = cols
         self.new_map = None
         self.init_map()
         self.load_map()
         self.error = None
 
     def init_map(self):
-        n = 30
-        m = 30
-        self.new_map = [0] * n
-        for i in range(n):
-            self.new_map[i] = [0] * m
+        self.new_map = [0] * self.rows
+        for i in range(self.rows):
+            self.new_map[i] = [0] * self.cols
 
     def load_map(self):
         index = 0
@@ -63,7 +63,7 @@ class DijkstraAlgorithm(PathAlgorithms):
         return None
 
     def check_box(self, x, y, direction, snake_x, snake_y, nodes):
-        if 0 <= x < 30 and 0 <= y < 30:
+        if 0 <= x < self.rows and 0 <= y < self.cols:
             if x != snake_x or y != snake_y:
                 if self.new_map[x][y] == 0:
                     node = Node(x, y, direction, nodes.cost + 1, nodes)
@@ -101,7 +101,7 @@ class DijkstraAlgorithm(PathAlgorithms):
 
 class AStar(DijkstraAlgorithm):
     def check_box(self, x, y, direction, snake_x, snake_y, nodes):
-        if 0 <= x < 30 and 0 <= y < 30:
+        if 0 <= x < self.rows and 0 <= y < self.cols:
             if x != snake_x or y != snake_y:
                 if self.new_map[x][y] == 0:
                     cost = sqrt((x - self.apple.x) ** 2 + (y - self.apple.y) ** 2)

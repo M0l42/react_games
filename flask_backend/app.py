@@ -39,12 +39,14 @@ def update():
 
     snake = Snake(data['snake'])
     apple = Apple(data['apple'])
+    rows = data['rows']
+    cols = data['cols']
     algorithm = data['algorithm']
 
     if algorithm == 'dijkstra':
-        path_algorithm = DijkstraAlgorithm(snake, apple)
+        path_algorithm = DijkstraAlgorithm(snake, apple, rows, cols)
     elif algorithm == 'a_star':
-        path_algorithm = AStar(snake, apple)
+        path_algorithm = AStar(snake, apple, rows, cols)
     path = path_algorithm.test()
     result = path_algorithm.error
     if result is None:
